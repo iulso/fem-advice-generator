@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/style.css" />
+    <script defer src="dist/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h1 class="advice__title">
+          Advice #
+          <span id="advice_number">
+            <!-- Advice ID goes here -->
+          </span>
+        </h1>
+        <blockquote class="advice__quote">
+          <p>
+            "<!-- Advice text goes here -->
+            <span id="advice"></span>
+            "
+          </p>
+        </blockquote>
+        <div class="advice__divider">
+          <img
+            srcset="
+              images/pattern-divider-mobile.svg  295w,
+              images/pattern-divider-desktop.svg 444w
+            "
+            sizes="(max-width: 40rem) 23.4375rem,
+             71.875rem"
+            src="images/pattern-divider-mobile.svg"
+            alt="Visual divider"
+          />
+        </div>
+        <button class="btn advice__dice" id="dice">
+          <img src="images/icon-dice.svg" alt="Dice" />
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/iulso">iulso</a>.
+      </div>
+    </footer>
+  </body>
+</html>

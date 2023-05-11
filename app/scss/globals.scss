@@ -1,0 +1,30 @@
+// BREAKPOINTS
+// 375px, 640px, 1150px, 1440px
+$breakpoints-up: (
+  'small': '23.4375em',
+  'medium': '40em',
+  'large': '71.875em',
+  'xlarge': '90em',
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+// GLOBAL VARIABLES
+:root {
+  // Colors
+  --main: hsl(193, 38%, 86%);
+  --green: 150, 100%, 66%;
+  --accent: hsl(var(--green));
+  --bg-main: hsl(218, 23%, 16%);
+  --bg-2nd: hsl(217, 19%, 24%);
+  --bg-accent: hsl(217, 19%, 38%);
+
+  // Fonts
+  --font-manrope: 'Manrope', sans-serif;
+  --font-weight-default: 800;
+  --size-quote: 1.75rem;
+}

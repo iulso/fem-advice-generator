@@ -1,0 +1,112 @@
+@use 'globals' as *;
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  font-family: var(--font-manrope);
+  font-weight: var(--font-weight-default);
+  color: var(--main);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.9375rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: var(--bg-2nd);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    max-width: 28.125rem;
+  }
+}
+
+.advice__title {
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 3px;
+  color: var(--accent);
+
+  @include breakpoint-up(medium) {
+    margin: 0 0 0.5rem;
+  }
+}
+
+.advice__quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 20.625rem;
+  font-size: var(--size-quote);
+
+  @include breakpoint-up(medium) {
+    min-height: 13.5rem;
+  }
+}
+
+.advice__divider {
+  margin: -0.5rem 0 0.5rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.advice__dice {
+  position: absolute;
+  bottom: -3.125rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  overflow: hidden; // check
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 1.5625rem;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+      color: var(--accent);
+    }
+  }
+}

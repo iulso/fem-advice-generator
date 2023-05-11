@@ -1,0 +1,52 @@
+// Source: Normalize -- https://github.com/necolas/normalize.css/blob/master/normalize.css
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button {
+  overflow: visible; /* 1 */
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button {
+  text-transform: none; /* 1 */
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/* CUSTOM */
+.btn {
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 0 1.25rem 0.5rem hsla(var(--green), 0.5);
+  }
+}
